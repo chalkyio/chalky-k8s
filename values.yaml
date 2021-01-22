@@ -1,5 +1,8 @@
 replicaCount: 1
 
+secrets:
+  jwtSigningKey: rlRfOS/MqSRD5Cs7mAoXAzQJTsFdO4l/FT04TCqQti8= # Replace this.
+
 service:
   port: 8080
 
