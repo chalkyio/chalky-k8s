@@ -14,3 +14,18 @@ resources:
 image:
   name: chalky-server
   pullPolicy: Never
+
+# This *definitely* needs changed for production.
+cockroachdb:
+  statefulset:
+    resources:
+      limits:
+        memory: "500Mi"
+      requests:
+        memory: "250Mi"
+  conf:
+    cache: "125Mi"
+    max-sql-memory: "250Mi"
+  storage:
+    persistentVolumes:
+      size: "2Gi"
