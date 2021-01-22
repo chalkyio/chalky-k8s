@@ -25,6 +25,11 @@ spec:
           env:
             - name: PORT
               value: "{{ .Values.service.port }}"
+            - name: JWT_SIGNING_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: jwt
+                  key: signingKey
           livenessProbe:
             httpGet:
               path: /api/health
