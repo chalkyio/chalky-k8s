@@ -24,7 +24,7 @@ cockroachdb:
       requests:
         memory: "250Mi"
   conf:
-    cache: "125Mi"
+    cache: "250Mi"
     max-sql-memory: "250Mi"
   storage:
     persistentVolumes:
