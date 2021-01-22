@@ -10,3 +10,7 @@ resources:
   requests:
     cpu: 100m
     memory: 128Mi
+
+image:
+  name: chalky-server
+  pullPolicy: Never

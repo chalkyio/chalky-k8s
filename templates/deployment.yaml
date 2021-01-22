@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
         - name: chalky-server-node
-          image: chalky-server
-          imagePullPolicy: Never
+          image: {{ .Values.image.name }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           ports:
